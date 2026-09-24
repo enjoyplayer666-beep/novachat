@@ -1,0 +1,23 @@
+name: NovaChat
+version: '1.0.0'
+main: ru.antidepressant.novachat.NovaChat
+api-version: '1.21'
+author: antidepressant
+softdepend: [PlaceholderAPI]
+
+commands:
+  novachat:
+    description: Управление плагином NovaChat
+    usage: /novachat reload
+  global:
+    description: Переключить свой чат в глобальный режим
+  local:
+    description: Переключить свой чат в локальный режим
+
+permissions:
+  novachat.admin:
+    description: Доступ к /novachat reload
+    default: op
+  novachat.color:
+    description: Разрешает использовать цвета/MiniMessage-теги в своих сообщениях
+    default: false

@@ -1,0 +1,37 @@
+# ============================================
+#  NovaChat — конфиг
+#  Можно использовать И старые &-коды (&a, &c, &l...),
+#  И hex вида &#RRGGBB, И нативный MiniMessage (<gradient>, <rainbow> и т.д.)
+#  — всё это работает одновременно, ничего выбирать не нужно.
+# ============================================
+
+# Символ, с которого начинается сообщение, чтобы отправить его в глобальный чат разово
+# (не меняет канал по умолчанию для игрока)
+global-symbol: "!"
+
+# Радиус локального чата в блоках
+local-radius: 100
+
+# Канал по умолчанию для игрока при заходе: LOCAL или GLOBAL
+default-channel: LOCAL
+
+# Форматы сообщений.
+# Доступные вставки:
+#   <player>            - ник игрока
+#   <message>           - текст сообщения
+#   %luckperms_prefix%  - префикс из LuckPerms (через PlaceholderAPI)
+#   %luckperms_suffix%  - суффикс из LuckPerms (через PlaceholderAPI)
+#   %simpleclans_tag%   - тег клана из SimpleClans (через PlaceholderAPI)
+# Можно добавлять любые другие %placeholder% плагины, если PlaceholderAPI их поддерживает.
+formats:
+  local: "&8[&7Л&8] %luckperms_prefix%%simpleclans_tag%&f<player>&7 &8→ &e<message>"
+  global: "&8[&9Г&8] %luckperms_prefix%%simpleclans_tag%&f<player>&7 &8→ &6<message>"
+
+messages:
+  no-one-nearby: "&7Никто вас не услышал!"
+  reload-usage: "&cИспользование: /novachat reload"
+  reload-success: "&aNovaChat успешно перезагружен!"
+  no-permission: "&cУ вас нет прав для этого."
+  switched-local: "&7Теперь вы пишете в &fлокальный &7чат."
+  switched-global: "&7Теперь вы пишете в &fглобальный &7чат."
+  players-only: "&cЭта команда только для игроков."
